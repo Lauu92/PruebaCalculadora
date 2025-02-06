@@ -16,35 +16,50 @@ public class Cociente {
         int opcion = leer.nextInt();
 
         switch (opcion) {
-            case 1: divisionReal();
+            case 1:
+                System.out.println("Introduce el dividendo: ");
+                double dividendoReal = leer.nextDouble();
+                System.out.println("Introduce el divisor: ");
+                double divisorReal = leer.nextDouble();
+                System.out.println(divisionReal(dividendoReal,divisorReal));
+                break;
+            case 2:
+                System.out.println("Introduce el dividendo: ");
+                int dividendoEntero = leer.nextInt();
+                System.out.println("Introduce el divisor: ");
+                int divisorEntero = leer.nextInt();
+                System.out.println(divisionEntero(dividendoEntero,divisorEntero));
             break;
-            case 2: divisionEntero();
+            case 3:
+                System.out.println("Introduce el dividendo: ");
+                double dividendoInverso = leer.nextDouble();
+                System.out.println("Introduce el divisor: ");
+                double divisorInverso = leer.nextDouble();
+                System.out.println(inversoReal(dividendoInverso,divisorInverso));
             break;
-            case 3: inversoReal();
-            break;
-            case 4: raizCuadrada();
+            case 4:
+                System.out.println("Introduce el número a calcular: ");
+                double raiz = leer.nextDouble();
+                System.out.println(raizCuadrada(raiz));
             break;
         }
+
+        leer.close();
     }
 
-    public static double divisionReal() {
-        double resultado = 0;
-        return resultado;
-
+    public static double divisionReal(double dividendo, double divisor) {
+        return dividendo/divisor;
     }
 
-    public static int divisionEntero() {
-        int resultado = 0;
-        return resultado;
+    public static int divisionEntero(int dividendo, int divisor) {
+        return dividendo/divisor;
     }
 
-    public static double inversoReal() {
-        double resultado = 0;
-        return resultado;
+    public static double inversoReal(double dividendoInverso, double divisorInverso) {
+        return divisorInverso/dividendoInverso;
     }
 
-    public static double raizCuadrada() {
-        double resultado = 0;
-        return resultado;
+    public static double raizCuadrada(double raiz) {
+        return Math.sqrt(raiz);
     }
 }
