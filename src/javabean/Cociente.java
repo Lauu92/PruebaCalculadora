@@ -3,9 +3,11 @@ package javabean;
 import java.util.Scanner;
 
 /**
- * Clase qye proporciona operaciones matemáticas relacionadas con el Cociente.
  * @author Laura Vinseiro
  * @version 1.0
+ * Clase que proporciona operaciones matemáticas relacionadas con el Cociente.
+ *
+ *
  */
 public class Cociente {
 
