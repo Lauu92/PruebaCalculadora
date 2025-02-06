@@ -1,4 +1,4 @@
-package javabean;
+package calculadora;
 
 import java.util.Scanner;
 
