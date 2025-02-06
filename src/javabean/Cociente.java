@@ -2,9 +2,19 @@ package javabean;
 
 import java.util.Scanner;
 
+/**
+ * Clase qye proporciona operaciones matemáticas relacionadas con el Cociente.
+ * @author Laura Vinseiro
+ * @version 1.0
+ */
 public class Cociente {
 
 
+    /**
+     * Genera un menú con las opcinones a elegir. Cada opción invoca uno de los métodos de la clase.
+     * La elección de los números es llevada a cabo mediante Scanner por el usuario, y se decide con
+     * un Switch.
+     */
     public static void menuCociente() {
         System.out.println("¿Qué quieres hacer? Introduce el número correspondiente a cada opción: ");
         System.out.println("1. División de dos números reales.");
@@ -31,11 +41,9 @@ public class Cociente {
                 System.out.println(divisionEntero(dividendoEntero,divisorEntero));
             break;
             case 3:
-                System.out.println("Introduce el dividendo: ");
-                double dividendoInverso = leer.nextDouble();
-                System.out.println("Introduce el divisor: ");
-                double divisorInverso = leer.nextDouble();
-                System.out.println(inversoReal(dividendoInverso,divisorInverso));
+                System.out.println("Introduce el número a calcular: ");
+                double numeroInverso = leer.nextDouble();
+                System.out.println(inversoReal(numeroInverso));
             break;
             case 4:
                 System.out.println("Introduce el número a calcular: ");
@@ -47,18 +55,36 @@ public class Cociente {
         leer.close();
     }
 
+    /**
+     * Calcula una división con números reales.
+     * @param dividendo dividendo de la división.
+     * @param divisor divisor de la división.
+     */
     public static double divisionReal(double dividendo, double divisor) {
         return dividendo/divisor;
     }
 
+    /**
+     * Calcula una división con números enteros.
+     * @param dividendo dividendo de la división.
+     * @param divisor divisor de la división.
+     */
     public static int divisionEntero(int dividendo, int divisor) {
         return dividendo/divisor;
     }
 
-    public static double inversoReal(double dividendoInverso, double divisorInverso) {
-        return divisorInverso/dividendoInverso;
+    /**
+     * Calcula el inverso de un número real.
+     * @param numeroInverso número a calcular.
+     */
+    public static double inversoReal(double numeroInverso) {
+        return 1/numeroInverso;
     }
 
+    /**
+     * Calcula la raíz cuadrada de un número.
+     * @param raiz número a calcular.
+     */
     public static double raizCuadrada(double raiz) {
         return Math.sqrt(raiz);
     }
