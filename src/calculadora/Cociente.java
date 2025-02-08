@@ -18,11 +18,8 @@ public class Cociente {
      * un Switch.
      */
     public static void menuCociente() {
-        System.out.println("¿Qué quieres hacer? Introduce el número correspondiente a cada opción: ");
-        System.out.println("1. División de dos números reales.");
-        System.out.println("2. División de dos números enteros. ");
-        System.out.println("3. Inverso de un número real. ");
-        System.out.println("4. Raíz cuadrada de un número.");
+
+        pintarOpcionesCociente();
 
         Scanner leer = new Scanner(System.in);
         int opcion = leer.nextInt();
@@ -54,7 +51,15 @@ public class Cociente {
             break;
         }
 
-        leer.close();
+
+    }
+
+    public static void pintarOpcionesCociente() {
+        System.out.println("¿Qué quieres hacer? Introduce el número correspondiente a cada opción: ");
+        System.out.println("1. División de dos números reales.");
+        System.out.println("2. División de dos números enteros. ");
+        System.out.println("3. Inverso de un número real. ");
+        System.out.println("4. Raíz cuadrada de un número.");
     }
 
     /**
